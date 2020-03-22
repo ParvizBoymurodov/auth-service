@@ -1,0 +1,42 @@
+POST http://localhost:9996/api/tokens
+Content-Type: application/json
+
+{
+  "username": "surush",
+  "password": "sur"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+###
+
+POST http://localhost:9996/api/tokens
+Content-Type: application/json
+
+{
+  "username": "vasya",
+  "password": "invalid"
+}
+
+###
+
+GET http://localhost:9996/api/manag
+Authorization: Bearer {{auth_token}}
+
+###
+
+DELETE http://localhost:9996/api/managers/1
+Authorization: Bearer {{auth_token}}
+
+
+###
+
+POST http://localhost:9996/api/managers
+Content-Type: application/json
+
+{
+"login": "surush",
+  "password": "sur"
+}
+
+###
