@@ -35,8 +35,8 @@ POST http://localhost:9996/api/managers
 Content-Type: application/json
 
 {
-  "login": "surush",
-  "password": "sur"
+  "login": "parviz",
+  "password": "par"
 }
 
 ###

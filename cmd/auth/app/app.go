@@ -1,9 +1,9 @@
 package app
 
 import (
-	"auth-service/pkg/managers"
-	"auth-service/pkg/token"
 	"errors"
+	"github.com/ParvizBoymurodov/auth-service/pkg/managers"
+	"github.com/ParvizBoymurodov/auth-service/pkg/token"
 	"github.com/ParvizBoymurodov/jwt/jwt"
 	"github.com/ParvizBoymurodov/mux/pkg/mux"
 	"github.com/ParvizBoymurodov/rest/pkg"

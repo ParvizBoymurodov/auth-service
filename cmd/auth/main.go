@@ -1,11 +1,11 @@
 package main
 
 import (
-	"auth-service/cmd/auth/app"
-	"auth-service/pkg/managers"
-	"auth-service/pkg/token"
 	"context"
 	"flag"
+	"github.com/ParvizBoymurodov/auth-service/cmd/auth/app"
+	"github.com/ParvizBoymurodov/auth-service/pkg/managers"
+	"github.com/ParvizBoymurodov/auth-service/pkg/token"
 	"github.com/ParvizBoymurodov/mux/pkg/mux"
 	"github.com/jackc/pgx/v4/pgxpool"
 	"net"

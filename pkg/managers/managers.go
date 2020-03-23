@@ -1,14 +1,17 @@
 package managers
 
 import (
-	"auth-service/pkg/token"
 	"context"
 	"errors"
+	"github.com/ParvizBoymurodov/auth-service/pkg/token"
 	"github.com/ParvizBoymurodov/mux/pkg/middleware/jwt"
 	"github.com/jackc/pgx/v4/pgxpool"
 	"golang.org/x/crypto/bcrypt"
 	"log"
 )
+
+type Url string
+
 
 type Service struct {
 	pool *pgxpool.Pool

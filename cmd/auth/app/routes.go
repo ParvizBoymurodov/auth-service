@@ -1,7 +1,7 @@
 package app
 
 import (
-	"auth-service/pkg/token"
+	"github.com/ParvizBoymurodov/auth-service/pkg/token"
 	"github.com/ParvizBoymurodov/mux/pkg/middleware/auth"
 	"github.com/ParvizBoymurodov/mux/pkg/middleware/jwt"
 	"github.com/ParvizBoymurodov/mux/pkg/middleware/logger"
