@@ -9,8 +9,7 @@ import (
 )
 
 func (s *server) InitRoutes() {
-	s.router.POST(
-		"/api/tokens",
+	s.router.POST("/api/tokens",
 		s.handleCreateToken(),
 		logger.Logger("TOKEN"),
 	)
@@ -20,8 +19,7 @@ func (s *server) InitRoutes() {
 		logger.Logger("MANAGERS"))
 
 
-	s.router.GET(
-		"/api/managers/{id}",
+	s.router.GET("/api/managers/{id}",
 		s.handleProfile(),
 		auth.Auth(),
 		jwt.JWT(reflect.TypeOf((*token.Payload)(nil)).Elem(), s.secret),

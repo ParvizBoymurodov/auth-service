@@ -2,8 +2,8 @@ POST http://localhost:9996/api/tokens
 Content-Type: application/json
 
 {
-  "username": "surush",
-  "password": "sur"
+  "username": "parviz",
+  "password": "par"
 }
 
 > {% client.global.set("auth_token", response.body.token); %}
@@ -20,7 +20,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:9996/api/manag
+GET http://localhost:9996/api/managers/19
 Authorization: Bearer {{auth_token}}
 
 ###

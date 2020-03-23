@@ -49,7 +49,6 @@ func (s *server) Start() {
 }
 
 func (s *server) Stop() {
-	// TODO: make server stop
 }
 
 type ErrorDTO struct {
