@@ -14,8 +14,8 @@ POST http://localhost:9996/api/tokens
 Content-Type: application/json
 
 {
-  "username": "vasya",
-  "password": "invalid"
+  "username": "surush",
+  "password": "sur"
 }
 
 ###
@@ -35,7 +35,7 @@ POST http://localhost:9996/api/managers
 Content-Type: application/json
 
 {
-"login": "surush",
+  "login": "surush",
   "password": "sur"
 }
 
