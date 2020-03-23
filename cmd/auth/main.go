@@ -35,9 +35,18 @@ func fromFLagOrEnv(flag *string, envName string) (server string, ok bool) {
 
 func main() {
 	flag.Parse()
-	hostf, _ := fromFLagOrEnv(host, envHost)
-	portf, _ := fromFLagOrEnv(port, envPort)
-	dsnf, _ := fromFLagOrEnv(dsn, envDSN)
+	hostf, ok := fromFLagOrEnv(host, envHost)
+	if !ok {
+		hostf = *host
+	}
+	portf, ok := fromFLagOrEnv(port, envPort)
+	if !ok {
+		portf = *port
+	}
+	dsnf, ok := fromFLagOrEnv(dsn, envDSN)
+	if !ok {
+		dsnf = *dsn
+	}
 
 	addr := net.JoinHostPort(hostf, portf)
 	start(addr, dsnf)
